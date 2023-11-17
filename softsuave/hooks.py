@@ -159,9 +159,9 @@ app_license = "mit"
 # Overriding Methods
 # ------------------------------
 #
-# override_whitelisted_methods = {
-#	"frappe.desk.doctype.event.event.get_events": "softsuave.event.get_events"
-# }
+override_whitelisted_methods = {
+	"frappe.utils.nestedset.rebuild_tree": "softsuave.overrides.nestedset.rebuild_tree"
+}
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,

@@ -1,0 +1,195 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:LHR-{MM}-{YYYY}-{#####}",
+ "creation": "2023-11-02 12:13:23.407871",
+ "default_view": "List",
+ "description": "Less Hour Request",
+ "doctype": "DocType",
+ "documentation": "https://frappehr.com/docs/v14/en/payroll-entry",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "amended_from",
+  "lft",
+  "rgt",
+  "is_group",
+  "old_parent",
+  "parent_less_hour_request",
+  "employee_tab",
+  "employee",
+  "employee_name",
+  "column_break_fxtn",
+  "from_date",
+  "to_date",
+  "reason_and_proof_section",
+  "reason",
+  "column_break_pgte",
+  "attach_image_smrm",
+  "image_eurt"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Less Hour Request",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Left",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Right",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "label": "Is Group"
+  },
+  {
+   "fieldname": "old_parent",
+   "fieldtype": "Link",
+   "label": "Old Parent",
+   "options": "Less Hour Request"
+  },
+  {
+   "fieldname": "parent_less_hour_request",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Parent Less Hour Request",
+   "options": "Less Hour Request"
+  },
+  {
+   "fieldname": "employee_tab",
+   "fieldtype": "Tab Break",
+   "label": "Employee"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_fxtn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "To Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reason_and_proof_section",
+   "fieldtype": "Section Break",
+   "label": "Reason & Proof"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Small Text",
+   "label": "Reason"
+  },
+  {
+   "fieldname": "column_break_pgte",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attach_image_smrm",
+   "fieldtype": "Attach Image"
+  },
+  {
+   "fieldname": "image_eurt",
+   "fieldtype": "Image"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_calendar_and_gantt": 1,
+ "is_submittable": 1,
+ "is_tree": 1,
+ "links": [],
+ "modified": "2023-11-10 20:25:55.392646",
+ "modified_by": "Administrator",
+ "module": "Softsuave",
+ "name": "Less Hour Request",
+ "naming_rule": "Expression",
+ "nsm_parent_field": "parent_less_hour_request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "queue_in_background": 1,
+ "route": "lhr",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Orange",
+   "title": "Draft"
+  },
+  {
+   "color": "Cyan",
+   "title": "Submitted"
+  },
+  {
+   "color": "Red",
+   "title": "Cancelled"
+  }
+ ],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}
